@@ -3,7 +3,7 @@ version: "3.8"
 services:
   app_proxy:
     environment:
-      APP_HOST: umbrel-store-hello_web_1
+      APP_HOST: web
       APP_PORT: 80
       APP_PROTOCOL: http
       PROXY_AUTH_ADD: "false"
