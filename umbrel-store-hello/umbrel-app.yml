@@ -14,7 +14,7 @@ repo: https://github.com/TriLogic/umbrel-store-hello
 support: https://github.com/TriLogic/umbrel-store-hello/issues
 port: 7200
 gallery:
-  - https://i.imgur.com/gtLjT0L.png
+  - https://raw.githubusercontent.com/TriLogic/umbrel-store/refs/heads/main/umbrel-store-hello/icon.svg
 path: ""
 defaultPassword: ""
 releaseNotes: >
