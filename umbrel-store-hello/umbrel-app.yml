@@ -4,10 +4,11 @@ name: Hello Umbrel
 category: development
 tagline: The simplest Umbrel app possible.
 version: "0.0.1"
-description: "Static hello page to verify the app store pipeline."
-developer: "You"
-repo: https://github.com/<you>/umbrel-store
-support: https://github.com/<you>/umbrel-store/issues
+description: > 
+    Static hello page to verify the app store pipeline.
+developer: Team Trilogic
+repo: https://github.com/TriLogic/umbrel-store
+support: https://github.com/TriLogic/umbrel-store/issues
 icon: icon.svg
 port: 80
 path: ""
