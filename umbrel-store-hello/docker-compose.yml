@@ -13,6 +13,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./site:/usr/share/nginx/html:ro
+    command: ["/bin/sh","-lc","chmod -R a+rX /usr/share/nginx/html && nginx -g 'daemon off;'"]
     expose:
       - "80"
     healthcheck:

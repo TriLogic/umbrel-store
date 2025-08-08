@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: umbrel-store-hello
-name: Herllo Umbrel
+name: Hello Umbrel
 category: Development
 version: "0.1.0"
 tagline: A Do Nothing App
