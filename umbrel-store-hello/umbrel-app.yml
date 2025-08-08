@@ -2,9 +2,9 @@ manifestVersion: 1
 id: umbrel-store-hello
 name: Herllo Umbrel
 category: Development
-version: "v0.107.62"
+version: "0.1.0"
 tagline: A Do Nothing App
-icon: https://github.com/walkxcode/dashboard-icons/blob/main/png/adguard-home.png?raw=true
+icon: https://raw.githubusercontent.com/TriLogic/umbrel-store/refs/heads/main/umbrel-store-hello/icon.svg
 description: >
   This is a do nothing app.
 developer: TriLogic Team
