@@ -21,3 +21,4 @@ releaseNotes: >
   Nothing much going on.
 submitter: TrilogicIndustriesLLC
 submission:
+compose: "docker-compose.yml"
