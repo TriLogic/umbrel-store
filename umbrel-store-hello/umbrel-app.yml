@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: umbrel-store-hello
 name: Herllo Umbrel
-category: Networking
+category: Development
 version: "v0.107.62"
 tagline: A Do Nothing App
 icon: https://github.com/walkxcode/dashboard-icons/blob/main/png/adguard-home.png?raw=true
@@ -10,8 +10,8 @@ description: >
 developer: TriLogic Team
 website: https://adguard.com/en/adguard-home/overview.html
 dependencies: []
-repo: https://github.com/AdguardTeam/AdguardHome
-support: https://github.com/AdguardTeam/AdguardHome/issues
+repo: https://github.com/TriLogic/umbrel-store-hello
+support: https://github.com/TriLogic/umbrel-store-hello/issues
 port: 7200
 gallery:
   - https://i.imgur.com/gtLjT0L.png
