@@ -1,12 +1,12 @@
 manifestVersion: 1
 
-id: umbrel-store-postgresql-pgadmin
+id: umbrel-store-postgres-pgadmin
 name: PostgreSQL + pgAdmin
 tagline: Postgres with a browser-based admin UI
 category: developer
 version: "1.0.0"
 port: 8080
-
+icon: https://raw.githubusercontent.com/TriLogic/umbrel-store/refs/heads/main/umbrel-store-postgre-pgadmin/icon.svg
 description: >-
   A bundled PostgreSQL database and pgAdmin 4 web UI. Persistent volumes,
   proxy-safe settings for Umbrel, and a pre-registered local server.
