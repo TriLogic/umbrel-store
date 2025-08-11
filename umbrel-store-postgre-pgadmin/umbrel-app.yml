@@ -4,7 +4,7 @@ id: umbrel-store-postgre-pgadmin
 name: PostgreSQL + pgAdmin
 tagline: PostgreSQL with a browser-based admin UI
 category: developer
-version: "1.0.5"
+version: "1.0.6"
 port: 5050
 icon: https://raw.githubusercontent.com/TriLogic/umbrel-store/refs/heads/main/umbrel-store-postgre-pgadmin/icon.svg
 description: >-
