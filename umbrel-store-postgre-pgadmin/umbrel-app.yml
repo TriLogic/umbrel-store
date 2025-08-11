@@ -1,8 +1,8 @@
 manifestVersion: 1
 
-id: umbrel-store-postgres-pgadmin
+id: umbrel-store-postgre-pgadmin
 name: PostgreSQL + pgAdmin
-tagline: Postgres with a browser-based admin UI
+tagline: PostgreSQL with a browser-based admin UI
 category: developer
 version: "1.0.0"
 port: 8080
