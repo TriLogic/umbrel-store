@@ -5,7 +5,7 @@ name: PostgreSQL + pgAdmin
 tagline: PostgreSQL with a browser-based admin UI
 category: developer
 version: "1.0.0"
-port: 80
+port: 5050
 icon: https://raw.githubusercontent.com/TriLogic/umbrel-store/refs/heads/main/umbrel-store-postgre-pgadmin/icon.svg
 description: >-
   A bundled PostgreSQL database and pgAdmin 4 web UI. Persistent volumes,
