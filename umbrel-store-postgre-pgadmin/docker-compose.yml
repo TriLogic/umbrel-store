@@ -2,9 +2,12 @@ version: "3.7"
 
 services:
   app_proxy:
+    depends_on:
+      - web
     environment:
-      # Route Umbrel's proxy to the web service
+      # Always point to the standard container name
       APP_HOST: ${APP_ID}_web_1
+      # pgAdmin listens on 80 inside; Umbrel exposes host port from manifest
       APP_PORT: 80
 
   db:
@@ -30,11 +33,12 @@ services:
       db:
         condition: service_healthy
     environment:
-      PGADMIN_DEFAULT_EMAIL: ${APP_DEFAULT_USERNAME}
-      PGADMIN_DEFAULT_PASSWORD: ${APP_DEFAULT_PASSWORD}
+      # Use explicit values; Umbrel doesn't inject APP_DEFAULT_* into compose
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: change_me
       PGADMIN_LISTEN_PORT: "80"
 
-      # Fix login/blank page behind Umbrel's reverse proxy (trust one proxy hop)
+      # Reverse-proxy fixes (trust one proxy hop)
       PGADMIN_CONFIG_ENHANCED_COOKIE_PROTECTION: "False"
       PGADMIN_CONFIG_PROXY_X_FOR_COUNT: "1"
       PGADMIN_CONFIG_PROXY_X_PROTO_COUNT: "1"
@@ -45,5 +49,6 @@ services:
       TZ: America/Chicago
     volumes:
       - ${APP_DATA_DIR}/pgadmin:/var/lib/pgadmin
-      - ${APP_DIR}/servers.json:/pgadmin4/servers.json:ro
+      # If you want auto-registration later, drop servers.json in APP_DATA_DIR and uncomment:
+      # - ${APP_DATA_DIR}/servers.json:/pgadmin4/servers.json:ro
 
