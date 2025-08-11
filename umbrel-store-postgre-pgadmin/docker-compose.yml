@@ -39,7 +39,7 @@ services:
       - ${APP_DATA_DIR}/pgadmin:/var/lib/pgadmin
 
   web: # pgAdmin
-    image: dpage/pgadmin4:8
+    image: dpage/pgadmin4:latest
     restart: on-failure
     depends_on:
       db:
