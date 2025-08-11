@@ -26,6 +26,6 @@ releaseNotes: >-
 
 dependencies: []
 path: ""
-defaultUsername: admin@example.com
+defaultUsername: admin@umbrel.local
 defaultPassword: change_me
 
