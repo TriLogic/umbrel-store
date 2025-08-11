@@ -1,6 +1,6 @@
 manifestVersion: 1
 
-id: umbrel-store-postgresql-pgadmin
+id: umbrel-postgresql-pgadmin
 name: PostgreSQL + pgAdmin
 tagline: Postgres with a browser-based admin UI
 category: developer
@@ -14,12 +14,12 @@ description: >-
 developer: Trilogic
 website: https://www.postgresql.org/
 submitter: Trilogic
-submission: https://github.com/trilogic/umbrel-store/pulls
-repo: https://github.com/trilogic/umbrel-store
-support: https://github.com/trilogic/umbrel-store/issues
+submission: https://github.com/trilogic/umbrel/pulls
+repo: https://github.com/trilogic/umbrel
+support: https://github.com/trilogic/umbrel/issues
 
 gallery:
-  - https://raw.githubusercontent.com/TriLogic/umbrel-store/refs/heads/main/umbrel-store-postgre-pgadmin/icon.svg
+  - https://raw.githubusercontent.com/TriLogic/umbrel/refs/heads/main/umbrel-postgre-pgadmin/icon.svg
 
 releaseNotes: >-
   Initial release of PostgreSQL + pgAdmin as a single Umbrel app.
