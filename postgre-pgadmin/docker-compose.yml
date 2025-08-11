@@ -1,0 +1,45 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      # <app-id>_<web-service-name>_1
+      APP_HOST: ${APP_ID}_web_1
+      APP_PORT: 80
+
+  db:
+    image: postgres:16
+    restart: on-failure
+    environment:
+      POSTGRES_DB: umbrel
+      POSTGRES_USER: umbrel
+      POSTGRES_PASSWORD: change_me
+      TZ: America/Chicago
+    volumes:
+      - ${APP_DATA_DIR}/pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U umbrel -d umbrel"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  web: # pgAdmin
+    image: dpage/pgadmin4:8
+    restart: on-failure
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${APP_DEFAULT_USERNAME}
+      PGADMIN_DEFAULT_PASSWORD: ${APP_DEFAULT_PASSWORD}
+      PGADMIN_LISTEN_PORT: "80"
+      # Reverse-proxy/cookie fixes commonly needed behind Umbrel:
+      PGADMIN_CONFIG_ENHANCED_COOKIE_PROTECTION: "False"
+      PGADMIN_CONFIG_PROXY_X_HOST: "1"
+      PGADMIN_CONFIG_PROXY_X_PORT: "1"
+      PGADMIN_CONFIG_PROXY_X_PROTO: "1"
+      TZ: America/Chicago
+    volumes:
+      - ${APP_DATA_DIR}/pgadmin:/var/lib/pgadmin
+      - ${APP_DIR}/servers.json:/pgadmin4/servers.json:ro
+

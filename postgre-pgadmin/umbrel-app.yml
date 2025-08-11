@@ -1,0 +1,31 @@
+manifestVersion: 1
+
+id: postgresql-pgadmin
+name: PostgreSQL + pgAdmin
+tagline: Postgres with a browser-based admin UI
+category: developer
+version: "1.0.0"
+port: 8080
+
+description: >-
+  A bundled PostgreSQL database and pgAdmin 4 web UI. Persistent volumes,
+  proxy-safe settings for Umbrel, and a pre-registered local server.
+
+developer: Trilogic
+website: https://www.postgresql.org/
+submitter: Trilogic
+submission: https://github.com/trilogic/umbrel-store/pulls
+repo: https://github.com/trilogic/umbrel-store
+support: https://github.com/trilogic/umbrel-store/issues
+
+gallery:
+  - https://raw.githubusercontent.com/TriLogic/umbrel-store/refs/heads/main/postgre-pgadmin/icon.svg
+
+releaseNotes: >-
+  Initial release of PostgreSQL + pgAdmin as a single Umbrel app.
+
+dependencies: []
+path: ""
+defaultUsername: admin@example.com
+defaultPassword: change_me
+
